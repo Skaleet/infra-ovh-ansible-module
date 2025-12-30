@@ -12,7 +12,7 @@ from ansible_collections.synthesio.ovh.plugins.module_utils.ovh import (
 
 DOCUMENTATION = """
 ---
-module: public_cloud_valkey_user_present
+module: public_cloud_valkey_user_create
 short_description: Create a Valkey user with ACL rules
 description:
   - Create a Valkey user in an OVH Public Cloud Valkey database if it does not exist.
