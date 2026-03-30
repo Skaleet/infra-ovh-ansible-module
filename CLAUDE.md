@@ -89,3 +89,23 @@ Some fields cannot be changed after creation (e.g. `flavor_name`, `anti_affinity
 1. Create `plugins/modules/<name>.py` following the pattern above
 2. Add the module name to the relevant action groups in `meta/runtime.yml`
 3. Add an entry to `README.md` under the appropriate section
+
+## OVH API Reference
+
+Interactive API console (explore endpoints, parameters, and response schemas):
+- **All APIs**: https://eu.api.ovh.com/console/
+- **Public Cloud – Kubernetes**: https://eu.api.ovh.com/console/?section=%2Fcloud&branch=v1#get-/cloud/project/-serviceName-/kube
+
+Key endpoints used when building Kubernetes modules:
+
+| Endpoint | Description |
+|---|---|
+| `GET /cloud/project/{serviceName}/kube` | List cluster IDs (returns strings, not objects) |
+| `GET /cloud/project/{serviceName}/kube/{kubeId}` | Get cluster details |
+| `GET /cloud/project/{serviceName}/kube/{kubeId}/nodepool` | List node pool IDs (returns strings, not objects) |
+| `GET /cloud/project/{serviceName}/kube/{kubeId}/nodepool/{nodePoolId}` | Get node pool details |
+| `POST /cloud/project/{serviceName}/kube/{kubeId}/nodepool` | Create node pool |
+| `PUT /cloud/project/{serviceName}/kube/{kubeId}/nodepool/{nodePoolId}` | Update node pool |
+| `DELETE /cloud/project/{serviceName}/kube/{kubeId}/nodepool/{nodePoolId}` | Delete node pool |
+
+**Important**: list endpoints (`GET .../kube`, `GET .../nodepool`) return arrays of ID strings, not arrays of objects. Fetch details individually with a second GET call.
