@@ -46,6 +46,9 @@ ip_info
 ip_move
 ip_reverse
 me_sshkey
+public_cloud_ai_token
+public_cloud_ai_token_info
+public_cloud_ai_token_renew
 public_cloud_block_storage
 public_cloud_block_storage_instance
 public_cloud_flavorid_info

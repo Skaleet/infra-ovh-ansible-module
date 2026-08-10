@@ -23,6 +23,9 @@ action_groups:
     - ip_move
     - ip_reverse
     - me_sshkey
+    - public_cloud_ai_token
+    - public_cloud_ai_token_info
+    - public_cloud_ai_token_renew
     - public_cloud_block_storage_instance
     - public_cloud_block_storage
     - public_cloud_flavorid_info
@@ -47,6 +50,11 @@ action_groups:
     - public_cloud_valkey_info
     - public_cloud_valkey_user
     - public_cloud_valkey_user_info
+    - public_cloud_postgresql
+    - public_cloud_postgresql_database
+    - public_cloud_postgresql_info
+    - public_cloud_postgresql_user
+    - public_cloud_postgresql_user_info
     - vps_display_name
     - vps_info
   dedicated_server:
@@ -68,6 +76,9 @@ action_groups:
     - dedicated_server_terminate
     - dedicated_server_vrack
   public_cloud:
+    - public_cloud_ai_token
+    - public_cloud_ai_token_info
+    - public_cloud_ai_token_renew
     - public_cloud_block_storage_instance
     - public_cloud_block_storage
     - public_cloud_flavorid_info
